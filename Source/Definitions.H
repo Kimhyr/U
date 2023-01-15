@@ -1,5 +1,5 @@
-#ifndef u_definitions_h$
-#define u_definitions_h$
+#ifndef U_Definitions_H
+#define U_Definitions_H
 
 namespace  U {
 
@@ -30,4 +30,4 @@ using Real64 = double;
 
 }
 
-#endif // u_definitions_h$
+#endif // U_Definitions_H

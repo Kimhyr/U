@@ -1,4 +1,6 @@
-#include "link.h"
+#include "Link.H"
+
+#include "Error.H"
 
 namespace U {
 
@@ -15,8 +17,9 @@ Link<Value_T, Node_T>::~Link() {
 }
 
 template<class Value_T, class Node_T>
-Node_T *Link<Value_T, Node_T>::get(Nat64 index)
-const noexcept {
+Node_T *Link<Value_T, Node_T>::get(Nat64 index) {
+	if (index + 1 >= this->size_)
+		throw Error::OUT_OF_RANGE;
 	Node_T *node;
 	for (node = this->root_; node; node = node->above())
 		if (--index == 0)
@@ -26,7 +29,7 @@ const noexcept {
 
 template<class Value_T, class Node_T>
 Node_T *Link<Value_T, Node_T>::get(Value_T value)
-const noexcept {
+noexcept {
 	Node_T *node;
 	for (node = this->root_; node; node = node->above())
 		if (node->value() == value)

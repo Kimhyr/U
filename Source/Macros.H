@@ -1,5 +1,5 @@
-#ifndef u_macros_h$
-#define u_macros_h$
+#ifndef U_Macros_H
+#define U_Macros_H
 
 #include <stdio.h>
 
@@ -15,4 +15,4 @@
     exit(1);                                                                   \
   } while (0)
 
-#endif // u_macros_h$
+#endif // U_Macros_H

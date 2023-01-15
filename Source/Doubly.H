@@ -1,7 +1,7 @@
-#ifndef u_link_doubly_h$
-#define u_link_doubly_h$
+#ifndef U_Doubly_H
+#define U_Doubly_H
 
-#include "link.h"
+#include "LinkNode.H"
 
 namespace U {
 
@@ -20,7 +20,7 @@ public:
 public:
 	inline constexpr
 	Link<Value_T, Doubly<Value_T>> *link()
-	const noexcept override { return this->link_; }
+	noexcept override { return this->link_; }
 
 	inline constexpr
 	Value_T *value()
@@ -28,11 +28,11 @@ public:
 
 	inline constexpr
 	Doubly<Value_T> *above()
-	const noexcept override { return this->above_; }
+	noexcept override { return this->above_; }
 	
 	inline constexpr
 	Doubly<Value_T> *under()
-	const noexcept { return this->under_; }
+	noexcept { return this->under_; }
 
 public:
 	Void insertAbove(Value_T value)
@@ -52,4 +52,4 @@ private:
 
 }
 
-#endif // u_link_doubly_h$
+#endif // U_Node_H
