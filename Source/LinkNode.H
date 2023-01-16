@@ -11,9 +11,6 @@ class Link;
 template<class Value_T, class Node_T>
 class LinkNode {
 public:
-	using This = Node_T;
-
-public:
 	LinkNode() = delete;
 	
 	virtual
@@ -29,7 +26,7 @@ public:
 	noexcept = 0;
 	
 	virtual inline constexpr
-	Node_T *above()
+	const Node_T *above()
 	noexcept = 0;
 
 public:
