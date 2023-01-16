@@ -6,7 +6,7 @@
 namespace U {
 
 template<class Value_T>
-class Doubly: LinkNode<Value_T, Doubly<Value_T>> {
+class Doubly: public LinkNode<Value_T, Doubly<Value_T>> {
 public:
 	Doubly(Link<Value_T, Doubly<Value_T>> *link, Value_T value);
 	Doubly(Link<Value_T, Doubly<Value_T>> *link, Value_T value,

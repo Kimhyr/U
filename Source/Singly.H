@@ -6,7 +6,7 @@
 namespace U {
 
 template<class Value_T>
-class Singly: LinkNode<Value_T, Singly<Value_T>> {
+class Singly: public LinkNode<Value_T, Singly<Value_T>> {
 public:
 	Singly(Link<Value_T, Singly<Value_T>> *link, Value_T value);
 	Singly(Link<Value_T, Singly<Value_T>> *link, Value_T value, Singly<Value_T> *above);
